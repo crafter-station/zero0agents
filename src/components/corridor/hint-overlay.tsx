@@ -19,11 +19,13 @@ export function HintOverlay() {
 
   return (
     <div
+      role="status"
+      aria-live="polite"
       className={cn(
         "fixed bottom-8 left-1/2 -translate-x-1/2 z-40",
         "bg-black/70 text-white px-6 py-3 rounded-full",
         "text-sm font-medium",
-        "transition-opacity duration-500",
+        "transition-opacity duration-500 motion-reduce:transition-none",
         visible ? "opacity-100" : "opacity-0"
       )}
     >

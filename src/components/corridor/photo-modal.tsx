@@ -39,6 +39,9 @@ export function PhotoModal({ photo, onClose }: PhotoModalProps) {
   return (
     <div
       ref={modalRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Photo: ${photo.filename}`}
       className={cn(
         "fixed inset-0 z-50 flex items-center justify-center",
         "bg-black/60 backdrop-blur-md",
@@ -59,12 +62,14 @@ export function PhotoModal({ photo, onClose }: PhotoModalProps) {
         <button
           type="button"
           onClick={onClose}
+          aria-label="Close photo"
           className={cn(
             "absolute -top-3 -right-3 z-10",
             "w-8 h-8 rounded-full bg-white shadow-lg",
             "flex items-center justify-center",
             "text-gray-600 hover:text-gray-900",
-            "transition-colors duration-200"
+            "transition-colors duration-200",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
           )}
         >
           <svg

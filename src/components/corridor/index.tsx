@@ -17,7 +17,7 @@ export function Corridor() {
   if (loading) {
     return (
       <div className="w-full h-screen bg-black flex items-center justify-center">
-        <div className="text-white text-lg">Loading photos...</div>
+        <div className="text-white text-lg">Loading photos…</div>
       </div>
     );
   }
